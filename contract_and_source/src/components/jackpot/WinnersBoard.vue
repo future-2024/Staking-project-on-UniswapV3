@@ -15,6 +15,7 @@
                 </div>
             </div>
         </q-banner>
+        
         <div class="row q-py-lg q-px-lg">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 justify-center flex">
                 <div class="text-center q-mb-sm text-bold text-h5">
