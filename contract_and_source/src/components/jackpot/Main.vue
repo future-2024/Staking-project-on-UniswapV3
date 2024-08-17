@@ -1,20 +1,5 @@
 <template>
     <div class="jackpot" id="jackpot">
-       <!-- <q-banner dense inline-actions
-                  class="text-white q-py-sm q-mt-md q-mx-lg text-h6 text-center text-uppercase flex"
-                  v-if="banner"
-        >
-            <div class="row">
-                <div class="col-11">
-                    <q-icon name="notification_important"></q-icon>
-                    Using smart contracts, tokens and crypto has always its risks.
-                    DYOR before using our beta.
-                </div>
-                <div class="col-1 flex items-center justify-end">
-                    <q-icon name="close" class="cursor-pointer" @click="banner=false"></q-icon>
-                </div>
-            </div>
-        </q-banner>-->
         <div class="g_slot_wrapper ">
             <div class="need_for_fix">
                 <div class="window">
