@@ -10,7 +10,6 @@
                                 <img src="../../assets/images/img.png" alt="">
                                 <a href="">Ended Successfully</a>
                             </div>
-
                             <div class="pt-3">
                                 <h3>Pumpkitten <small>GameFi</small></h3>
                                 <h4>Total NFTs <samp>100</samp>

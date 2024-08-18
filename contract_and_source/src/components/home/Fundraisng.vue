@@ -4,7 +4,6 @@
             <div class="pb-5">
                 <h2><small>LAUNCHPAD</small> <br> Built for up-and-coming NFT artists and creators, thousands of NFT enthusiasts will launch their projects with everything necessary provided.</h2>
             </div>
-
             <div class="categories pt-3">
                 <a href="">All Categories</a>
                 <a href="" class="active">Art</a>
