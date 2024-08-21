@@ -16,7 +16,6 @@
                         </div>
                     </aside>
                 </div>
-
                 <div class="col-12 col-md-6 col-lg-4 mt-4">
                     <aside>
                         <span class="demo2"></span>
