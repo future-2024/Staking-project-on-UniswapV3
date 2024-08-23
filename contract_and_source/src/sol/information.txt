@@ -2,6 +2,7 @@ https://ftmscan.com/address/0x799d1360bb8f4dc81ac82caa410c1a7964990891#code
 
 
 haha token: 0xa199f786bFB26612b19Bbc81dc36b2F7f9f874eb
+grim token: 0xA556f91530b4e1f59964d5891ee1c50517dC01cd
 nft manager: 0xb39d21718e24DE36fDD8c5C73e928B5EFF33d6C2
 uniswapV3Factory: 0xE6dA85feb3B4E0d6AEd95c41a125fba859bB9d24
 

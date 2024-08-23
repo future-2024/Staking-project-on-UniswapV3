@@ -1,0 +1,31 @@
+Contract to allow users to farm diamond tokens by staking ftm-diamond LP tokens from SpiritSwap
+
+Main thing: To give out farming rewards, the admin will manually send tokens to the contract. Per day 200 Diamonds in total to all users staked for farming
+
+Farming and harvesting functions
+
+Lock period 
+
+Users can start harvesting only after 24 hours; the harvesting button is active only after 24 hours. (this will be removed in future, so add an option in the contract enable disable lock period for harvesting)
+
+Tax system 30% to 0% (first day (meaning first day after the 24 hours lock) is 30%, then 29% and so on, on the 30th day, tax is 0%)
+
+If users are sending LP tokens more than one time, each will have separate harvesting time, lock period and tax period.
+
+Reward amount - total of 200 diamonds per day, reward distribution to staked tokens calculated every minute .
+
+Other functions needed. 
+
+Admin should be able to change the amount of farming rewards (the amount of diamond tokens given out for farming rewards per day), initially it is set as 200; but it can be reduced or increased later on.
+
+Admin should be able to change/edit/add new LP token address with the amount of daily diamonds allowed to farm - you can make it like an array with different indexes. Admin should be able to remove/disable existing LP address for farming and add new LP address with the amount of diamonds per day to farming.
+
+Start farming rewards, Stop farming rewards (to enable or disable farming for the pair)
+
+Withdraw diamonds (from the contract) to the admin address when needed. 
+
+Add reentrant guard function for harvesting.
+
+We should be able to change the harvesting tax % (the number of days) in the contract.
+No emergency withdrawal that could be exploited, so just one withdraw function for the deployer 
+

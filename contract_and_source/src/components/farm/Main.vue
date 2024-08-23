@@ -55,7 +55,7 @@
                                 dense outlined solo autocomplete="off">
                             </q-select>
                             <q-td colspan="2">
-                                <div v-if="!isMetaMaskConnected" class="btn btn-default text-white" @click="connectWallet">Connect</div>
+                                <div v-if="!isMetaMaskConnected" class="btn btn-warning text-white" @click="connectWallet">Connect</div>
                                 <div v-show="isMetaMaskConnected">
                                     <div v-if="!isApproved()" class="btn btn-warning text-white" @click="approve()">Approve</div>
                                     <div v-if="isApproved()" class="btn btn-primary text-white" @click="stake()">Stake</div>
@@ -257,12 +257,17 @@ import ConnectComponent from "../ConnectComponent.vue";
                         
                         for (let i = 0; i < this.$store.state.farming.perUserInfo[2].length; i++) {
                             let perData = this.$store.state.farming.perUserInfo[2][i];
-                            let taxFee = 30 - ((Math.floor(Date.now() / 1000)) - perData.startDeposit)/(60 * 3);
+                            let _taxFee = 30 - ((Math.floor(Date.now() / 1000)) - perData.startDeposit)/(process.env.HAHA_TAX_FEE_INTERVAL);
+                            let taxFee;
+                            if(_taxFee > 0) {
+                                taxFee = _taxFee
+                            } else {
+                                taxFee = 0;
+                            }
                             
-                            let _rewardPerDay = 10000000000000000000000 / 1440;
+                            let _rewardPerDay = process.env.HAHA_TOKEN_AMOUNT_PER_DAY / 1440;
                             let _rewardRate = (Math.floor(Date.now() / 1000) - perData.lastUpdatedTime) / 60;
                             let _rewardAmount = _rewardRate * perData.amountPerNFT * _rewardPerDay / this.$store.state.farming.totalLPtokenAmount * (100-taxFee) / 100;
-                            console.log('reward amount', _rewardAmount);
 
                             let _remainedTimeForHarvest = ((this.availableHarvestInterval - ((Math.floor(Date.now() / 1000) - perData.lastUpdatedTime))) / 60).toFixed(2);
                             let _remainedTimeForWithdraw = ((this.availableWithdrawInterval - ((Math.floor(Date.now() / 1000) - perData.startDeposit))) / 60).toFixed(2);
