@@ -1,0 +1,357 @@
+/*
+a.btn{
+    background-color: transparent;
+    border-radius: 12px;
+    color: #fff;
+    border: #FFCB72 2px solid;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 12px 20px;
+    font-weight: 500;
+    transition: all .2s linear;
+}
+
+a.btn:hover {
+    color: #fff;
+    background-color: #F93800;
+}
+
+ 
+#mainContent nav {
+    width: 250px;
+     height: 88vh;
+     background-color: #FF6630;
+}
+
+a#pressDave {
+    width: 150px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    margin-left: 30px;
+    background-image: url('../images/logo.png');
+    display: inline-block;
+}
+
+a#menu {
+    cursor: pointer;
+}
+
+a#menu svg {
+    width: 30px;
+    height: 30px;
+}
+
+a#menu svg path { fill: #fff; }
+
+
+#mainContent nav ul li {
+    list-style: none;
+}
+
+
+#mainContent nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-indent: 25px;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: 0.3s linear all;
+}
+
+#mainContent nav ul li a.active,
+#mainContent nav ul li a:hover{
+    background-color: #FF3F00;
+    color: #ffffff;
+}
+
+#mainContent nav ul li a:hover {
+    background-color: #FF845C;
+}
+
+#mainContent nav ul li a i.icon svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+#mainContent nav ul li a i.icon svg path {
+    fill: #fff;
+    transition: 0.3s linear all;
+}
+
+#mainContent nav ul li a.active i.icon svg path,
+#mainContent nav ul li a:hover i.icon svg path {
+    fill: #ffffff;
+}
+
+*/
+#workingArea {
+    margin: 0 auto !important;
+    width: 90%;
+}
+
+#workingArea .welcome{
+    position: relative;
+    background-color: #ffcb728c;
+    border-radius: 12px;
+    width: 90%;
+    margin: 0 auto !important;
+    padding: 20px 20px 10px 50px;
+}
+
+#workingArea .welcome h3::before{
+    position: absolute;
+    left: -35px;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../icons/waving-hand.png');
+}
+
+#workingArea .welcome h3 {
+    position: relative;
+    color: #F93800;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#workingArea .welcome p {
+    color: #181818;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#workingArea .growth{
+    width:90%;
+    margin: 20px auto !important;
+}
+
+#workingArea .growth .tabBg{
+    border-radius: 12px;
+    background-color: #fefefe;
+    padding: 20px 0;
+    -webkit-box-shadow: 0 2px 5px 0 #858585;
+    box-shadow: 0 2px 5px 0 #858585;
+}
+
+#workingArea .growth h2 {
+    color: #F93800;
+    text-align: center;
+    line-height: 30px;
+}
+
+#workingArea .growth h2 small {
+    color: #191919;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 0;
+}
+
+#workingArea .growth p svg {
+    fill: #17152b;
+    width: 15px;
+    height: 15px;
+}
+
+#workingArea .growth p {
+    text-align: right;
+    color: #191919;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+#workingArea .growth p a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #F93800;
+    text-decoration: none;
+}
+
+#workingArea .growth a svg {
+    width: 12px;
+    height: 12px;
+}
+
+#workingArea .growth a svg line {
+    stroke: #F93800 !important;
+}
+
+.searchBar {
+    width:90%;
+    margin: 0px auto !important;
+    background-color: #F2D5A5;
+    color: #181818;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 2px 5px 0 #858585;
+    box-shadow: 0 2px 5px 0 #858585;
+}
+
+.searchBar input[type=search] {
+    border-radius: 12px;
+    padding: 20px;
+    border: none;
+}
+
+.searchBar input[type=search]:focus {
+    box-shadow: none;
+    border: none;
+}
+
+#workingArea .vaults {
+    width:90%;
+    margin: 30px auto !important;
+}
+
+#workingArea .vaults .overview {
+    border-radius: 20px;
+    background-color: #fefefe;
+    color: #191919;
+    padding: 15px 50px;
+    -webkit-box-shadow: 0 2px 5px 0 #858585;
+    box-shadow: 0 2px 5px 0 #858585;
+}
+
+.custom-table div.btn {
+    border: #F93800 solid 2px;
+    color: #F93800;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.custom-table div.btn:hover { 
+    color: #fff; 
+    background-color: #F93800;
+}
+
+.custom-table div.farm_input {
+    border-radius: 8px;
+    background-color: #ff855c50;
+    border: #F93800 solid thin;
+    color: #282828;
+    margin-left:0px;
+    margin-top:0 !important;
+    padding: 0 !important;
+    width:100%;
+}
+
+.custom-table div.farm_input div.row {
+    padding: 0 10px !important;
+    margin: 0 !important;
+}
+
+.custom-table div.farm_input div.col {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.copyright {
+    color: #191919;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+section#walletPop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+section#walletPop.active { display: flex; }
+
+section#walletPop aside {
+    width: 98%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 12px;
+    position: relative;
+}
+
+section#walletPop aside a.btn {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #FF3F00;
+    border: #FF3F00 solid 2px;
+}
+
+section#walletPop aside a.btn.reverse {
+    background-color: transparent;
+    color: #FF3F00;
+}
+
+section#walletPop aside a.btn:hover {
+    background-color: #FFCB72;
+}
+
+section#walletPop aside a.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+section#walletPop aside a.close svg {
+    width: 28px;
+    height: 28px;
+}
+
+
+@media (max-width: 996px) {
+    #mainContent nav {
+        position: absolute;
+        left: -100%;
+        bottom: 0;
+        top: 90px;
+        height: auto;
+        z-index: 300;
+        transition: 0.3s all linear;
+    }
+
+    #mainContent nav.active {
+        left: 0;
+    }
+
+    #workingArea {
+        width: 100%;
+    }
+
+    #workingArea .vaults .overview {
+        padding: 15px 20px;
+    }
+
+    
+}
+
+@media (max-width: 766px) {
+    #workingArea .growth{
+        width:90%;
+        margin: 50px auto !important;
+    }
+
+    #workingArea .vaults .overview {
+        overflow-x: scroll;
+        padding: 15px 0;
+    }
+    table#coinTable {
+        width: 800px;
+        margin: 0;
+        padding: 0;
+    }
+}

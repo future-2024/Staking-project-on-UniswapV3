@@ -1,0 +1,59 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "E:\\IT development\\Upwork working\\Nikola-Serbia\\project\\2024\\10\\10_29_Staking project\\hardhat\\contracts\\new.sol": {
+      "lastModificationDate": 1730205457543,
+      "contentHash": "e16950bf0b7cbe0bc43d41eabc5298cf",
+      "sourceName": "contracts/new.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.16",
+        ">=0.6.0",
+        ">= 0.5.16",
+        ">=0.6.12",
+        "^0.8.0",
+        "^0.8.0",
+        ">=0.6.0",
+        ">=0.6.0",
+        ">=0.6.0",
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Address",
+        "Context",
+        "ERC20",
+        "IERC20",
+        "IERC20Metadata",
+        "MasterChef",
+        "Ownable",
+        "ReentrancyGuard",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    }
+  }
+}
