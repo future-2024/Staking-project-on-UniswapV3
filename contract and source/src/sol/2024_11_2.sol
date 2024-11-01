@@ -4441,11 +4441,12 @@ contract MasterChef is Ownable, ReentrancyGuard {
         // Total Reward amount from contract will be increased.
         updatePool(_pid, address(msg.sender));                                                        // update rewardAmount by now
 
-        if(canHarvest(_pid, address(msg.sender)) == true)
+        if(canHarvest(_pid, address(msg.sender)) == true) {
             IERC20(haha).transfer(address(msg.sender), myDeposit.rewardAmount);       // User will get rewrad token from contract.
             totalHahaRewards = totalHahaRewards.add(myDeposit.rewardAmount);    
             myDeposit.rewardAmountHistory = rewradAmount.add(myDeposit.rewardAmount); // User total reward amount from contract will be increased.
             myDeposit.lastUpdatedTime = block.timestamp;
+        }
     }
 
     function canHarvest(uint256 _pid, address _user) public view returns (bool) {
