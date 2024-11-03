@@ -1,0 +1,17 @@
+.q-field__native > span {
+    margin-left: 15px!important;
+}
+.q-field__label {
+    margin-left: 10px;
+}
+.text-gray {
+    color: rgb(156, 156, 156);
+}
+.blog {
+    margin: 0 10px;
+    width: 300px;
+    min-width: 120px;
+}
+.q-item__label {
+    margin-left: 15px;
+}

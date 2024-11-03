@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #EEFDFE;
+}
+
+header {
+    padding: 15px 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 100% bottom;
+    background-image: url('../images/nav-bg.png');
+}
+
+footer a.pressdave,
+header a.pressdave {
+    width: 120px;
+    height: 80px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../images/press_dave.png');
+}
+
+header .container {
+    max-width: 1200px;
+}
+
+header a#menuBtn {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+    background-image: url('../icons/menu.png');
+}
+
+header .menuBar a {
+    margin-right: 50px;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    color: #f2fbfb;
+    text-transform: uppercase;
+    font-weight: normal;
+    transition: 0.2s all linear;
+}
+
+header .menuBar {
+    z-index: 1000;
+}
+
+header .menuBar a:hover {
+    color: #f46228;
+}
+
+header .menuBar .wallet {
+    color: #000;
+    padding: 10px 0px;
+    width:160px;
+    font-size: 13px;
+    border-radius: 50px;
+    display: inline-block;
+    background-color: #eefdfe;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 0px;
+    transition: 0.2s all linear;
+}
+
+header .menuBar .wallet i.moneyBag {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../icons/wallet.png');
+}
+
+header .menuBar .wallet:hover {
+    background-color: #f46228;
+    color: #fff;
+}
+
+section#bannerTitle {
+    padding: 80px 0 60px 0;
+    background-color: #eefdfe;
+}
+
+section#bannerTitle h1 {
+    color: #000;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+#support {
+    width: 100%;
+    background-repeat: no-repeat;
+    padding: 118px 0;
+    background-size: auto 100%;
+    background-position: top right;
+    background-image: url('../images/curve.png');
+    background-color: #EEFDFE;
+}
+
+#support h6 {
+    font-size: 13px;
+    color: #fff;
+}
+
+#support img {
+    width: 100px;
+    margin-right: 30px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+#support h5 {
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 13px;
+    color: #000;
+}
+
+#fundraisng {
+    background-color: #040707;
+}
+
+#blog h2,
+#fundraisng h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#blog h2 small,
+#fundraisng h2 small {
+    color: #f46228;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#fundraisng .categories a {
+    font-size: 14px;
+    color: #f2fbfb;
+    padding: 14px 23px;
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: #292929;
+    margin: 5px 5px;
+    display: inline-block;
+    transition: 0.3s linear all;
+}
+
+#fundraisng .categories a:last-child {
+    margin-right: 0;
+}
+
+#fundraisng .categories a:hover,
+#fundraisng .categories a.active {
+    background-color: #f46228;
+}
+
+#demo {
+    padding: 50px 0 80px 0;
+    background-color: #040707;
+}
+
+#blog aside,
+#demo aside {
+    background-color: #141414;
+    text-align: left;
+    color: #fff;
+    border-radius: 20px;
+    border: #222222 2px solid;
+}
+
+#blog aside span,
+#demo aside span {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+#blog aside span.demo1,
+#demo aside span.demo1 {
+    background-image: url('../images/img.png');
+}
+#blog aside span.demo3,
+#demo aside span.demo3 {
+    background-image: url('../images/imgd3.png');
+}
+#blog aside span.demo2,
+#demo aside span.demo2 {
+    background-image: url('../images/imgd1.png');
+}
+#blog aside span.demo4,
+#demo aside span.demo4 {
+    background-image: url('../images/imgd2.png');
+}
+#blog aside span.demo5,
+#demo aside span.demo5 {
+    background-image: url('../images/imgd5.png');
+}
+#blog aside span.demo6,
+#demo aside span.demo6 {
+    background-image: url('../images/imgd6.png');
+}
+#demo aside img {
+    width: 90px;
+    height: 80px;
+    margin-top: -60px;
+    border: #141414 3px solid;
+    border-radius: 20px;
+}
+
+#demo aside .inner a {
+    background-color: #4a2719;
+    color: #f46228;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#demo aside h3 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: 500;
+}
+
+#demo aside h3 small {
+    font-size: 14px;
+    color: #727272;
+    text-transform: uppercase;
+}
+
+#comingSoon aside h4,
+#demo aside h4 {
+    font-size: 14px;
+    color: #727272;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#comingSoon aside h4 samp,
+#demo aside h4 samp {
+    color: rgb(221, 221, 221);
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+#comingSoon aside h4 {
+    font-size: 16px;
+}
+
+#comingSoon {
+    padding: 100px 0;
+    background-color: #eefdfe;
+}
+
+#comingSoon aside .inner {
+    width: 100%;
+    max-width: 550px;
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('../images/curve2.png');
+}
+
+#comingSoon aside img {
+    width: 90px;
+    height: 90px;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+#comingSoon aside h3 {
+    font-size: 26px;
+    color: #fff;
+    font-weight: normal;
+}
+
+#comingSoon aside h3 strong {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+#comingSoon aside h3 small {
+    font-size: 13px;
+    color: #727272;
+    text-transform: uppercase;
+}
+
+#comingSoon aside .timer {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#comingSoon aside .timer span {
+    font-size: 40px;
+    line-height: 25px;
+}
+
+#comingSoon aside .timer span small {
+    font-size: 13px;
+    color: #727272;
+}
+
+#comingSoon aside .timer samp {
+    font-size: 40px;
+    line-height: 25px;
+}
+
+#comingSoon article h2 {
+    color: #000;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+#comingSoon article p {
+    color: rgb(39, 39, 39);
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding: 50px 0;
+}
+
+#comingSoon article a {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+    padding: 22px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    background-color: transparent;
+    margin-right: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.2s all linear;
+}
+
+#comingSoon article a.active {
+    padding: 22px 65px;
+}
+
+#comingSoon article a:hover,
+#comingSoon article a.active {
+    background-color: #f46228;
+    color: #f2fbfb;
+}
+
+#comingSoon article a.active:hover {
+    background-color: #000000;
+}
+
+#comingSoon article a i.paper {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../icons/page.png');
+}
+
+#blog {
+    background-color: #040707;
+    padding: 60px 0 80px 0;
+}
+
+#blog h2 {
+    text-align: center;
+}
+
+#blog h2 small {
+    line-height: 80px;
+}
+
+#blog h4 {
+    text-align: center;
+    color: rgb(189, 189, 189);
+    font-size: 16px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+#blog aside h3 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+#blog p {
+    color: rgb(189, 189, 189);
+    font-size: 13px;
+    line-height: 25px;
+}
+
+footer {
+    padding: 50px 0 70px 0;
+    background-color: #eefdfe;
+}
+
+footer a.pressdave {
+    width: 140px;
+}
+
+footer .copyright {
+    font-size: 13px;
+    color: #000000;
+}
+
+footer .navMenu a {
+    margin: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+}
+
+footer .socialMedia a {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 50px 30px;
+}
+
+footer .socialMedia a.facebook {
+    background-image: url('../icons/facebook-circular-logo.png');
+}
+
+footer .socialMedia a.twitter {
+    background-image: url('../icons/twitter.png');
+    width: 30px;
+    height: 30px;
+}
+
+footer .socialMedia a.discord {
+    width: 30px;
+    height: 30px;
+    background-image: url('../icons/discord.png');
+}
+
+footer .socialMedia a.github {
+    background-image: url('../icons/github.png');
+    margin-right: 0;
+}
+
+@media (max-width:1600px) {
+    header {
+        background-image: url('../images/nav-bg-2.png');
+    }
+    #support {
+        background-image: url('../images/curve-2.png');
+        background-position: left top;
+    }
+}
+
+@media (max-width:1200px) {
+    header {
+        background-image: url('../images/nav-bg-3.png');
+    }
+    header .menuBar a {
+        margin-right: 30px;
+    }
+    header .menuBar .wallet {
+        padding: 8px 15px;
+    }
+    #support {
+        background-image: url('../images/curve-3.png');
+    }
+}
+
+@media (max-width:992px) {
+    header .menuBar {
+        display: none;
+        position: absolute;
+        background-color: #040707 !important;
+        top: 75px;
+        margin:auto;
+        width: 280px;
+        padding: 20px 20px 30px 20px;
+    }
+    header .menuBar a {
+        display: block;
+        margin: 10px 0;
+        text-align: right;
+        font-size: 1.1rem;
+    }
+
+    header .menuBar .wallet {
+        margin-top:10px;
+        padding: 8px 12px;
+        display: inline-block;
+    }
+    section#bannerTitle h1 {
+        font-size: 30px;
+    }
+    #support {
+        background-color: #040707;
+    }
+    #support h5 {
+        color: #fff;
+    }
+}
+
+@media (max-width:768px) {
+    section#bannerTitle {
+        padding: 30px 0;
+    }
+    section#bannerTitle h1 {
+        font-size: 35px;
+    }
+    #blog h2,
+    #fundraisng h2 {
+        font-size: 35px;
+    }
+    #comingSoon aside .inner {
+        background-color: #040707;
+        border-radius: 20px;
+        padding: 30px;
+    }
+    #comingSoon article h2 {
+        font-size: 40px;
+    }
+    footer .navMenu a {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+    footer .socialMedia a {
+        margin: 30px 10px;
+    }
+}
+
+@media (max-width:576px) {
+    .css-block {
+        max-width: 90%;
+    }
+
+    .css-block-transparent {
+        max-width: 90%;
+    }
+
+    .css-buttons {
+        max-width: 90%;
+    }
+
+    .action {
+        width: 40% !important;
+    }
+
+    .modal__content {
+        width: 350px !important;
+    }
+}
+
+@media (max-width:375px) {
+}
+
+btn,
+a.btn input.btn,
+a.button,
+span.button,
+div.button {
+  color: rgb(255, 255, 255);
+  padding: 11px 23px;
+  min-height: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: 14px !important;
+  text-decoration: none;
+  vertical-align: middle;
+  outline: none;
+  position: relative;
+  text-align: center;
+  border-radius: 100px !important;
+  overflow: hidden;
+  will-change: transform, box-shadow;
+  cursor:pointer !important;
+}
+
+.Vue-Toastification__toast--warning {
+    background-color:blue;
+    color: #fff;
+}

@@ -1,0 +1,39 @@
+https://ftmscan.com/address/0x799d1360bb8f4dc81ac82caa410c1a7964990891#code
+
+
+haha token: 0xa199f786bFB26612b19Bbc81dc36b2F7f9f874eb
+nft manager: 0xb39d21718e24DE36fDD8c5C73e928B5EFF33d6C2
+uniswapV3Factory: 0xE6dA85feb3B4E0d6AEd95c41a125fba859bB9d24
+
+user 0x42E044334a2F341f94436007D838D4627595Ac95
+uniswapV3Pool: 0xce765688febe127a4300ae5ba96365faf35bdeed
+
+last contract address: 0x377b427c1dD8f5034c5fa90040d33816C9551158
+spooky swap pid: 7367, 7548
+
+
+https://www.freelancer.com/projects/javascript/Web-Integration-Existing/proposals
+
+
+
+I mean yes, that part only
+
+1. When the user clicks on connect wallet, we need to show availale LP token automatically in the deposit field already, so user don’t need to check and enter it manually before depositing.
+2. The amount of haha available to harvest should be shown in the fields
+
+# We will have to show APR % we can show that only based on available $haha to harvest showing these fields is pretty standard in any farming page
+# If we need to change the contract code in order to show these, we will have to make the necessary adjustments
+# because these things are the most basic stuff of farming.
+
+# APR = [(HahaRewardsPerMinute X 60 X 24 X 365)/TotalHahaLPStaked)] X 100
+
+# So to calculate APR you just need to fetch the variable HahaRewardsPerMinute and TotalHahaStaked in the contract
+
+
+# DailyRewardsAmount is CONSTANT
+# So PerMinuteReward is CONSTANT/(24X60)
+
+# So individual user reward is 
+
+# UserStake/TotalStake X PerMinuteReward X CurrentTime - LastTimeHarvested X TaxRate-100
+
