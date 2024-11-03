@@ -80,7 +80,7 @@
                                                class="rounded-borders q-mr-sm farm_avatar" ></q-img>
                                     </q-td>
                                     <q-td style="width:250px">
-                                        <div class="label text-primary">{{props.row.pair}} : <span class="text-warning">{{ props.row.tokenId }}</span></div>
+                                        <div class="label text-primary">{{props.row.pair}} : <span class="text-warning">{{ props.row.pId }}</span></div>
                                         Tax Fee: {{ props.row.taxFee }} % - {{props.row.farm}}
                                     </q-td>
                                     <q-td style="width:200px">

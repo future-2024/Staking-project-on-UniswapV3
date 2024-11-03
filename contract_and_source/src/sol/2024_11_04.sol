@@ -4263,9 +4263,9 @@ contract MasterChef is Ownable, ReentrancyGuard {
     uint256 public totalHahaRewards;                                     // total reward amount from contract. 
 
     // First day and default harvest interval
-    uint256 public constant DEFAULT_HARVEST_INTERVAL = 120; // 2 mins;            // User can harvest in next 1 minutes as default
-    uint256 public constant MAX_HARVEST_INTERVAL = 300;    // 5 mins               // User cannot harvest or withdraw in next 1 day from deposited time.
-
+    uint256 public DEFAULT_HARVEST_INTERVAL = 120; // 2 mins;            // User can harvest in next 1 minutes as default
+    uint256 public MAX_HARVEST_INTERVAL = 300;    // 5 mins               // User cannot harvest or withdraw in next 1 day from deposited time.
+    uint256 public TAX_FEE_INTERVAL = 180;  // 1 day
     uint256 public REWARD_PER_DAY = 10000000000000000000000;           // 10K haha per day
     // Total allocation points. Must be the sum of all allocation points in all pools.
     uint256 public totalAllocPoint = 0;                                     // this is amount of staking pool in this contract.
@@ -4293,6 +4293,15 @@ contract MasterChef is Ownable, ReentrancyGuard {
     function safeHahaTransfer(uint256 _amount) external onlyOwner {           
         IERC20(haha).transferFrom(address(msg.sender), address(this),  _amount);        
     }    
+    function setDefaultInterval(uint256 _amount) external onlyOwner {           
+        DEFAULT_HARVEST_INTERVAL = _amount;       
+    }    
+    function setMaxInterval(uint256 _amount) external onlyOwner {           
+        MAX_HARVEST_INTERVAL = _amount;       
+    }    
+    function setRewardPerDay(uint256 _amount) external onlyOwner {           
+        REWARD_PER_DAY = _amount;       
+    }     
 
     // Owner can set LockUpRate manually.
     
@@ -4440,7 +4449,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
 
     function getTaxFee(uint256 _pId) public view returns (uint256) {
         DepositInfo memory myDeposit =  depositInfo[msg.sender][_pId][0];
-        uint256 taxFee = 30 - (block.timestamp.sub(myDeposit.startDeposit)).div(60 * 60 *24);
+        uint256 taxFee = 30 - (block.timestamp.sub(myDeposit.startDeposit)).div(TAX_FEE_INTERVAL);
         return taxFee; 
     }
 
@@ -4487,6 +4496,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
     // Harvest rewards.
     function harvest(uint256 _pid) public nonReentrant {
         DepositInfo storage myDeposit =  depositInfo[msg.sender][_pid][0];                      // Get deposit information with token id and address
+        require(block.timestamp.sub(myDeposit.startDeposit) >= MAX_HARVEST_INTERVAL, "You can withdraw after 1 day");
         require(myDeposit.owner == msg.sender, "you are not owner of this LP token");       // Will check if msg.sender is owner of deposit
         require(block.timestamp.sub(myDeposit.lastUpdatedTime) >= DEFAULT_HARVEST_INTERVAL, "You can withdraw after 1 day");
         
@@ -4548,8 +4558,8 @@ contract MasterChef is Ownable, ReentrancyGuard {
         uint256 rewardRate = (block.timestamp.sub(myDeposit.lastUpdatedTime)).div(60); //  now time - last deposit time / 60 
         uint256 rewardAmount = lpSupply.mul(rewardRate).mul(rewardPerMin).div(totalLPToken);
         
-        if((block.timestamp.sub(myDeposit.startDeposit)).div(60 * 60 *24) < 30) {
-            myDeposit.taxFee = 30 - (block.timestamp.sub(myDeposit.startDeposit)).div(60 * 60 *24); // this is fax fee that you have wanted
+        if((block.timestamp.sub(myDeposit.startDeposit)).div(TAX_FEE_INTERVAL) < 30) {
+            myDeposit.taxFee = 30 - (block.timestamp.sub(myDeposit.startDeposit)).div(TAX_FEE_INTERVAL); // this is fax fee that you have wanted
             userDeposit.taxFee = myDeposit.taxFee;
         } else {
             myDeposit.taxFee = 0;
@@ -4563,7 +4573,7 @@ contract MasterChef is Ownable, ReentrancyGuard {
         else 
             rewardAmount = rewardAmount;
         myDeposit.rewardAmount = rewardAmount;
-        userDeposit.amountPerNFT = rewardAmount;
+        userDeposit.rewardAmount = rewardAmount;
         return (rewardAmount, myDeposit.taxFee, lpSupply);
     }
 }
