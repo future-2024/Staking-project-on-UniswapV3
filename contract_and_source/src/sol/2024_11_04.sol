@@ -4225,7 +4225,6 @@ contract MasterChef is Ownable, ReentrancyGuard {
     using SafeERC20 for IERC20;
 
     // The operator
-    // address private _operator;
 
     INonfungiblePositionManager public nftManager;    
     IUniswapV3Factory public uniswapFactory;
