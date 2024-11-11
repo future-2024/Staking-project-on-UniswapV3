@@ -15,11 +15,11 @@
                 </div>
             </div>
         </q-banner>
-        
+
         <div class="row q-py-lg q-px-lg">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 justify-center flex">
                 <div class="text-center q-mb-sm text-bold text-h5">
-            Game Stats
+                    Game Stats
                 </div>
                 <div class="treasury__status">
                     <div class="row">
@@ -77,14 +77,11 @@
                     </div>
                 </div>
                  <div class="text-center q-mb-sm text-bold text-h5">
-            Claim 💎 Founders Rewards
-        </div>
-                <div class="claim__status">
-                    
-                    <div class="status">
-                        
-                        <div class="row">
-                            
+                    Claim 💎 Founders Rewards
+                </div>
+                <div class="claim__status">                    
+                    <div class="status">                        
+                        <div class="row">                            
                             <div class="col-xs-2 q-mt-md q-mb-sm text-center">
                                 <img :src="require(`@/assets/ftm.png`)" style="width: 25px;height:25px"/>
                             </div>
